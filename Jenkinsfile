@@ -15,7 +15,9 @@ pipeline {
         stage('Ejecutar aplicación') {
             steps {
                 // Usamos "bat" en lugar de "sh" para ejecutar el JAR en Windows
-                bat 'java -jar target/gestion-musica-0.0.1-SNAPSHOT.jar'
+                // Cambiamos el nombre del archivo JAR al que se generó realmente
+                bat 'java -jar target/ejercicio-jenkins-0.0.1-SNAPSHOT.jar'
+
             }
         }
     }
